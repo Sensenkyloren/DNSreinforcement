@@ -1,0 +1,38 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+#zone "ies.test" {
+#    type slave;
+#    file "/var/cache/bind/db.ies.test";
+#    masters { 192.168.57.10; };  
+#};
+
+zone "informatica.ies.test" {
+    type slave;
+    file "/var/cache/bind/db.informatica.ies.test";
+    masters { 192.168.57.10; };
+};
+
+zone "aulas.ies.test" {
+    type slave;
+    file "/var/cache/bind/db.aulas.ies.test";
+    masters { 192.168.57.10; };
+};
+
+#zone "departamentos.ies.test" {
+#    type slave;
+#    file "/var/cache/bind/db.departamentos.ies.test";
+#    masters { 192.168.57.10; };
+#};
+
+
+#zone "57.168.192.in-addr.arpa" {
+#    type slave;
+#    file "/var/cache/bind/db.57.168.192.in-addr.arpa";
+#    masters { 192.168.57.10; };
+#};

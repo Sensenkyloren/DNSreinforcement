@@ -1,0 +1,20 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	DNSA.informatica.ies.test. root.informatica.ies.test. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	DNSA.informatica.ies.test.
+DNSA	IN	A	192.168.57.10
+
+
+server01	IN	A	192.168.57.10
+pcprofesor	IN	A	192.168.57.20
+pc01		IN	A	192.168.57.21
+pc02		IN	A	192.168.57.22
+pc03		IN	A	192.168.57.23
